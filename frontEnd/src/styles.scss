@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primaire: 0,0,0;
+    --primaire-bg: 16, 16, 16
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+/* Style pour le track (fond de la scrollbar) */
+::-webkit-scrollbar-track {
+    background: rgb(var(--primaire-bg));
+    border-radius: 10px;
+}
+
+/* Style pour le thumb (le "pouce" de la scrollbar) */
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+    border: 1px solid #2d2d2d;
+}
+
+/* Changer la couleur du thumb lors du hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
