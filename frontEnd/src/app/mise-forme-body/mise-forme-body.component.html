@@ -1,0 +1,9 @@
+<div class="flex gap-3 mt-2">
+<div *ngFor="let artiste of liste">
+    <img src={{artiste.image}} alt="photo" [ngClass]="rounded_full?'rounded-full':'rounded-md'" class="w-28 h-28  shadow-lg object-cover" />
+    <p class="text-white text-sm mt-2">{{artiste.name}}</p>
+
+    <p class="text-gray-500  text-sm">{{artiste.type}}</p>
+   
+ </div> 
+ <div class="flex gap-3 mt-2">

@@ -1,1 +1,11 @@
-<p>header works!</p>
+<div class="flex">
+  <div class="flex gap-3 mt-3">
+        <img src="../../assets/back.png" alt="back" class="w-4 h-4" (click)="previous()">
+        <img src="../../assets/next.png" alt="next" class="w-4 h-4" (click)="next()">
+  </div>
+
+  <div class="ml-auto flex gap-7">
+    <p class="text-gray-300 mt-2 hover:text-white hover:cursor-pointer">S'incrire</p>
+    <button class="bg-white rounded-full p-2 text-sm">Se connecter</button>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="bg-primairebg p-3 pt-5">
+
+    <div>
+        <p class="text-white">Artistes populaires</p>
+       
+            <app-mise-forme-body [liste]="listeArtistes" [rounded_full]="true">  </app-mise-forme-body>
+    </div>
+
+    <div class="mt-10">
+        <p class="text-white">Albums populaires</p>
+        <app-mise-forme-body [liste]="listeAlbums" [rounded_full]="false">  </app-mise-forme-body>
+    </div>
+
+
+    <!-- Composant pour Les Radio Populaire-->
+    <div class="mt-10">
+        <p class="text-white">Radio populaire</p>
+        <div class="flex gap-3 mt-2 ">
+            <div *ngFor="let artiste of listeRadios">
+                <div [ngStyle]="{'background-color': artiste.background}" class="pt-1 rounded-md">
+                    <div class="flex ml-2 mr-2 mb-5">
+                        <img src="../../assets/spotify_little.png" alt="spotify" class="w-3 h-3"/>
+                        <p class="ml-auto text-xss">RADIO</p>
+                    </div>
+                    <div class="flex">
+                        <img src={{artiste.image}} alt="photo" class="w-10 h-10 rounded-full object-cover" />
+                        <img src={{artiste.image3}} alt="photo"  class="w-16 h-16 -mt-1 rounded-full  object-cover" />
+                        <img src={{artiste.image2}} alt="photo" class="w-10 h-10 rounded-full object-cover" />
+                       
+                    </div>
+                    <p class="text-primaire font-bold text-sm mt-4 ml-2 text-lg ">{{artiste.name}}</p>
+            
+                    
+                </div>
+               <p class="text-gray-500 flex-wrap  text-xs">{{truncateText(artiste.type,22)}}</p>
+             </div> 
+
+
+        </div>
+         
+    </div>
+
+   <div class="mt-20">
+         <app-footer></app-footer>
+   </div>
+
+</div>

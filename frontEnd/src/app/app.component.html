@@ -1,18 +1,23 @@
-<div class="flex gap-1 bg-primaire">
+<div class="flex  bg-primaire">
 
-  <div class="flex-none w-1/5">
+  <!-- Menu de l'application -->
+  <div class="flex-none w-1/5 ">
     <app-menu></app-menu>
     </div>
 
 
   <div class=" flex flex-col flex-grow bg-blue-500 h-screen ">
-
-    <div class="flex-none h-1/7 bg-red-500 p-2">
+ <!-- Header de l'application -->
+    <div class="flex-none h-1/7 bg-primaire p-2">
       <app-header></app-header>
     </div>
 
-    <!-- Deuxième cellule : le reste -->
-    <div class="flex-grow bg-blue-200 p-4">Cellule 3</div>
+    <!-- Body de l'application -->
+    <div class="flex-grow bg-primaire p-4 ">
+
+      <app-body></app-body>
+    
+    </div>
  
   </div>
 </div>
